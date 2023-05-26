@@ -46,11 +46,11 @@ class JobsApplicationTests {
 	 * With out using synchronization
 	 */
 	@Test
-	public void testCounterWithConcurrency() throws InterruptedException {
+	public void counterWithoutSyncronization() throws InterruptedException {
 		int numberOfThreads = 10;
 		ExecutorService service = Executors.newFixedThreadPool(10);
 		CountDownLatch latch = new CountDownLatch(numberOfThreads);
-		MyCounter counter = new MyCounter();
+		Counter counter = new Counter();
 		for (int i = 0; i < numberOfThreads; i++) {
 			service.execute(() -> {
 				counter.increment();

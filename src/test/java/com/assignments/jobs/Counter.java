@@ -1,6 +1,6 @@
 package com.assignments.jobs;
 
-public class MyCounter {
+public class Counter {
 
 	int i = 0;
 

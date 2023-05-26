@@ -9,12 +9,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Document("subjobs")
 public class SubJobs {
-	public SubJobs(String jobId, String name, Date createdDate) {
-		super();
-		this.jobId = jobId;
-		this.name = name;
-		this.createdDate = createdDate;
-	}
+//	public SubJobs(String jobId, String name, Date createdDate) {
+//		super();
+//		this.jobId = jobId;
+//		this.name = name;
+//		this.createdDate = createdDate;
+//	}
 	private String jobId;
 	private String name;
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)

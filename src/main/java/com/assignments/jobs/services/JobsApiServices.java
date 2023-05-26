@@ -11,29 +11,34 @@ import com.assignments.jobs.repository.DbRepositoryJobs;
 
 @Component
 public class JobsApiServices {
-	
+
 	@Autowired
 	DbRepositoryJobs repository;
 
 	public List<Jobs> getAllJobs() {
 		
-		return repository.findAll();
+			return repository.findAll();
+		
+
 	}
 
 	public Optional<Jobs> getJob(int id) {
 		
-		return repository.findById(id);
+			return repository.findById(id);
+	
+
+		
 	}
 
 	public String saveJob(Jobs obj) {
-		
+
 		try {
 			repository.save(obj);
 		} catch (Exception e) {
-			System.out.println("something wrong please chheck "+ e);
+			System.out.println("something wrong please check " + e);
 		}
-		
-		return "jobs saved successfully" ;
+
+		return "jobs saved successfully";
 	}
 
 }

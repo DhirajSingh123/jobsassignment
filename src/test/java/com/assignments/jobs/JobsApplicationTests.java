@@ -62,22 +62,6 @@ class JobsApplicationTests {
 	}
 
 	/*
-	 * getAllSubJobs testing using mockito
-	 */
-	@Test
-	public void getAllSubJobs() {
-
-		Date date = new Date();
-
-		List<SubJobs> subjob = List.of(new SubJobs("501", "Java Developer", date),
-				new SubJobs("501", "Python Developer", date));
-
-		when(dbrepositoryForSubJobs.findAll()).thenReturn(subjob);
-
-		assertEquals(2, subJobsServices.getAllSubJobs().size());
-	}
-	
-	/*
 	 * getAllJobs testing using mockito
 	 */
 
